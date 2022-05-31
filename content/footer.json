@@ -4,20 +4,41 @@
     "text": ""
   },
   "links_1": {
-    "list_pages": true,
+    "list_pages": false,
     "title": "Páginas",
-    "list": []
+    "list": [
+      {
+        "text": "Sobre a Acnatti",
+        "url": "#"
+      },
+      {
+        "text": "Cuidados com o Produto",
+        "url": "#"
+      },
+      {
+        "text": "Políticas de Privacidade",
+        "url": "#"
+      },
+      {
+        "text": "Termos de Uso",
+        "url": "#"
+      },
+      {
+        "text": "Fale Conosco",
+        "url": "#"
+      }
+    ]
   },
   "links_2": {
-    "list_categories": true,
+    "list_categories": false,
     "title": "Categorias",
     "list": []
   },
   "contacts": {
     "title": "Contatos",
-    "phone_wpp": true,
+    "phone_wpp": false,
     "socials": true,
-    "email": true,
+    "email": false,
     "address": true
   },
   "stamps": [
