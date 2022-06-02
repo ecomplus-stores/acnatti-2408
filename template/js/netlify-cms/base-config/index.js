@@ -16,8 +16,8 @@ export default options => {
   
   options.sections = getSections(options).concat([
     {
-      label: '[ALPIX] - Cabeçalho com Bannner',
-      name: 'apx_bannerTitle',
+      label: '[ALPIX] - Seção com Imagem',
+      name: 'apx_section',
       widget: 'object',
       fields: [
         {
@@ -37,7 +37,169 @@ export default options => {
           name: 'image',
           widget: 'image',
           required: false,
-        } 
+        },
+        {
+          label: 'Lista de Benefícios',
+          name: 'benefits',
+          widget: 'list',
+          required:false,
+          fields: [
+            {
+              label: 'Item da Lista',
+              name: 'list_option',
+              widget: 'object',
+              required:false,
+              fields: [
+                {
+                  label: 'Texto do Item',
+                  name: 'text',
+                  widget: 'string'          
+                },
+                {
+                  label: 'Ícone do item',
+                  name: 'image',
+                  widget: 'image'          
+                },                
+              ]
+            },          
+          ]
+        },
+        {
+          label: 'Botões',
+          name: 'buttons',
+          widget: 'list',
+          required:false,
+          fields: [
+            {
+              label: 'Botão',
+              name: 'button',
+              widget: 'object',
+              required:false,
+              fields: [
+                {
+                  label: 'Texto do Botão',
+                  name: 'text',
+                  widget: 'string'          
+                },
+                {
+                  label: 'Link do Botão',
+                  name: 'url',
+                  widget: 'url'          
+                },
+                {
+                  label: 'Cor do texto',
+                  name: 'text_color',
+                  widget: 'color'
+                },
+                {
+                  label: 'Cor do fundo',
+                  name: 'background_color',
+                  widget: 'color'
+                },
+                {
+                  label: 'Cor da borda',
+                  name: 'border_color',
+                  widget: 'color'
+                }
+              ]
+            },          
+          ]
+        },
+      ]
+    },
+    {
+      label: '[ALPIX] - Depoimentos',
+      name: 'apx_testimonials',
+      widget: 'object',
+      fields: [
+        {
+          label: 'Título',
+          required: false,
+          name: 'title',
+          widget: 'string'
+        },
+        {
+          label: 'Descrição',
+          required: false,
+          name: 'description',
+          widget: 'text'
+        },
+        {
+          label: 'Depoimentos',
+          name: 'testimonials',
+          widget: 'list',
+          required:false,
+          fields: [
+            {
+              label: 'Depoimento',
+              name: 'testimonial',
+              widget: 'object',
+              required:false,
+              fields: [
+                {
+                  label: 'Nome do Cliente',
+                  name: 'name',
+                  widget: 'string'          
+                },
+                {
+                  label: 'Depoimento',
+                  name: 'text',
+                  widget: 'string'          
+                },
+                {
+                  label: 'Foto do Cliente',
+                  name: 'image',
+                  widget: 'image'          
+                },                
+              ]
+            },          
+          ]
+        },        
+      ]
+    },
+    {
+      label: '[ALPIX] - FAQ',
+      name: 'apx_faq',
+      widget: 'object',
+      fields: [
+        {
+          label: 'Título',
+          required: false,
+          name: 'title',
+          widget: 'string'
+        },
+        {
+          label: 'Descrição',
+          required: false,
+          name: 'description',
+          widget: 'text'
+        },
+        {
+          label: 'Perguntas',
+          name: 'questions',
+          widget: 'list',
+          required:false,
+          fields: [
+            {
+              label: 'Pergunta',
+              name: 'question',
+              widget: 'object',
+              required:false,
+              fields: [
+                {
+                  label: 'Pergunta',
+                  name: 'title',
+                  widget: 'string'          
+                },
+                {
+                  label: 'Resposta',
+                  name: 'response',
+                  widget: 'string'          
+                }              
+              ]
+            },          
+          ]
+        },        
       ]
     },
     {
@@ -119,19 +281,8 @@ export default options => {
           required: false,
           name: 'description',
           widget: 'text'
-        },
-        {
-          label: 'Texto do Botão',
-          required: false,
-          name: 'btn_text',
-          widget: 'string'
-        },
-        {
-          label: 'Link do Botão',
-          required: false,
-          name: 'btn_link',
-          widget: 'string'
         }
+        
       ]
     },
     {
