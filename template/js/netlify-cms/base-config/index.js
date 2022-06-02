@@ -84,7 +84,7 @@ export default options => {
                 {
                   label: 'Link do Botão',
                   name: 'url',
-                  widget: 'url'          
+                  widget: 'string'          
                 },
                 {
                   label: 'Cor do texto',
